@@ -1,0 +1,9 @@
+thetaxi-ks.ddns.net:80, thetaxi-ks.ddns.net:443 {
+	file_server
+	reverse_proxy /crib* http://serverbox:8080
+}
+
+serverbox:80 {
+	file_server
+	reverse_proxy /crib* http://serverbox:8080
+}
